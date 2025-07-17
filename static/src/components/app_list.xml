@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-
     <t t-name="app_owl.app_list" owl="1">
         <div class="todo-list-container">
             <div class="row mx-2 mt-3">
@@ -39,7 +38,8 @@
                               <input type="color" class="form-control form-control-color" id="exampleColorInput" t-att-value="task.color" title="Choose your color" t-on-change="(e)=>this.updateColor(e,task)"/>
                           </td>
                           <td>
-                              <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" t-on-click="()=>this.editTask(task)">Edit</button> <button class="btn btn-danger" t-on-click="()=>this.deleteTask(task)">Delete</button>
+                              <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" t-on-click="()=>this.editTask(task)">Edit</button> 
+                              <button class="btn btn-danger" t-on-click="()=>this.deleteTask(task)">Delete</button>
                           </td>
                         </tr>
                       </tbody>

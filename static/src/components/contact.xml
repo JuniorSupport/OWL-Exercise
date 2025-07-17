@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<templates xml:space="preserve">
+    <t t-name="app_owl.contact" owl="1">
+        <div>
+            
+            <div class="row mx-2 mt-3">
+                <div class="col-lg-6">
+                    <button class="btn btn-primary" >Nuevo</button>
+                </div>
+            </div>
+            
+            <div class="row m-2">
+                <col>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="state.contactList" t-as="contact" t-key="contact.id">
+                                <th scope="row" t-esc="contact.id"></th>
+                                <td t-esc="contact.name"></td>
+                                <td t-esc="contact.email"></td>
+                                <td t-esc="contact.phone"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </col>
+            </div>
+        </div>
+    </t>
+    
+</templates>

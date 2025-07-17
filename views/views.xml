@@ -1,60 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="app_owl.list">
-      <field name="name">app_owl list</field>
-      <field name="model">app_owl.app_owl</field>
-      <field name="arch" type="xml">
-        <list>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </list>
-      </field>
-    </record>
--->
+    <menuitem name="OWL Project" id="menu_owl_tutorial" sequence="10">
 
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="app_owl.action_window">
-      <field name="name">app_owl window</field>
-      <field name="res_model">app_owl.app_owl</field>
-      <field name="view_mode">list,form</field>
-    </record>
--->
+        <menuitem name="App List" id="menu_app_owl_all_list" sequence="10" action="action_app_owl_all_list"/>
+        <menuitem name="App List OWL" id="menu_app_owl_all_list_js" sequence="10" action="action_app_owl_all_list_js"/>
 
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="app_owl.action_server">
-      <field name="name">app_owl server</field>
-      <field name="model_id" ref="model_app_owl_app_owl"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "list,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
+        <menuitem name="List Contact" id="menu_app_owl_contact" sequence="30" action="action_contact"/>
 
-    <!-- Top menu item -->
-<!--
-    <menuitem name="app_owl" id="app_owl.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="app_owl.menu_1" parent="app_owl.menu_root"/>
-    <menuitem name="Menu 2" id="app_owl.menu_2" parent="app_owl.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="app_owl.menu_1_list" parent="app_owl.menu_1"
-              action="app_owl.action_window"/>
-    <menuitem name="Server to list" id="app_owl" parent="app_owl.menu_2"
-              action="app_owl.action_server"/>
--->
-  </data>
+        <menuitem name="List Contact OWL" id="menu_app_owl_contact_owl"  action="action_contact_list"/>
+
+    </menuitem>
 </odoo>

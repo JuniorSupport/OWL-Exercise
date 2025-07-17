@@ -24,13 +24,15 @@ Long description of module's purpose
     'data': [
         'security/ir.model.access.csv',
         'views/all_list.xml',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/contact_view.xml',
+        'views/views.xml'
+
     ],
     'assets':{
         'web.assets_backend':[
-            'app_owl/static/src/components/app_list.js',
-            'app_owl/static/src/components/app_list.xml'
+            'app_owl/static/src/components/*.js',
+            'app_owl/static/src/components/*.xml',
+    
         ]
 
     },

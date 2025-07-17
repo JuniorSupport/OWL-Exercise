@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_app_owl_all_list,app_owl.all_list,model_app_owl_all_list,base.group_user,1,1,1,1
 
+
+access_app_owl_contact,app_owl.contact,model_app_owl_contact,base.group_user,1,1,1,1

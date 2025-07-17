@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="view_contact_list" model="ir.ui.view">
+            <field name="name">app_owl.contact.list</field>
+            <field name="model">app_owl.contact</field>
+            <field name="arch" type="xml">
+                <list string="Contact List">
+                    <field name="name"></field>
+                    <field name="email"></field>
+                    <field name="phone"></field>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_contact_form" model="ir.ui.view">
+            <field name="name">app_owl.contact.form</field>
+            <field name="model">app_owl.contact</field>
+            <field name="arch" type="xml">
+                <form string="Contact Form">
+                    <sheet>
+                        <group>
+                            <field name="name"></field>
+                            <field name="email"></field>
+                            <field name="phone"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_contact_list" model="ir.actions.client">
+            <field name="name">Contact OWL List</field>
+            <field name="tag">app_owl.action_contact_list</field>
+        </record>
+
+        <record id="action_contact" model="ir.actions.act_window">
+            <field name="name">Contacts List</field>
+            <field name="res_model">app_owl.contact</field>
+            <field name="view_mode">list,form</field>
+        </record> 
+    
+    </data>
+</odoo>
