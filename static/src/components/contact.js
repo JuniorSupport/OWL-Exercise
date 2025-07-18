@@ -23,7 +23,37 @@ export class ContactList extends Component{
 
     async getAllContacts(){
         this.state.contactList=await this.orm.searchRead(this.model,[],["name","email","phone"]);
-        console.log(this.state.ContactList)
+        console.log(this.state.contactList)
+    }
+
+    resetForm(){
+        this.state.contact={name:'',email:'',phone:''};
+    }
+
+    async addContact(){
+        this.resetForm();
+        this.state.activeId=false;
+        this.state.isEdit=false;
+    }
+    async editContact(contact){
+        this.state.contact={...contact}
+        this.state.isEdit=true;
+        this.state.activeId=contact.id;
+    }
+
+    async saveChanges(){
+        if(!this.state.isEdit){
+            await this.orm.create(this.model,[this.state.contact]);
+            this.resetForm();
+        }else{
+            await this.orm.write(this.model,[this.state.activeId],this.state.contact)
+        }
+        await this.getAllContacts();
+    }
+
+    async deleteContact(contact) {
+        await this.orm.unlink(this.model, [contact.id]);
+        await this.getAllContacts(); 
     }
 }
 ContactList.template='app_owl.contact';
